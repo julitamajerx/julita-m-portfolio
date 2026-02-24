@@ -1,0 +1,20 @@
+@use '../../variables' as *;
+
+:host {
+  padding: $frame-padding;
+  @include flex-center;
+}
+
+.contact-element {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.3rem;
+  }
+}

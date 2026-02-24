@@ -1,0 +1,11 @@
+<div class="custom-frame">
+  <div class="upper-bar">
+    <span>C:\JULITA\{{ frameService.currentTitle() }}</span>
+    <button (click)="frameService.closeWindow()" routerLink="/">
+      <img src="interface.png" alt="Close" />
+    </button>
+  </div>
+  <div class="inner-content">
+    <ng-content></ng-content>
+  </div>
+</div>

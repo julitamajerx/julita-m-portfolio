@@ -1,0 +1,63 @@
+@use '../../variables' as *;
+
+:host {
+  padding: 40px;
+  @include flex-center(row);
+}
+
+a {
+  font-weight: bold;
+  color: white;
+  font-size: large;
+  border-radius: 35px;
+  width: 150px;
+  height: 70px;
+  background-color: $color-secondary-dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: $color-secondary;
+}
+
+a:active {
+  background-color: $color-secondary-dark;
+  transition: background-color 0.1s;
+}
+
+a .span-mother,
+a .span-mother2 {
+  display: flex;
+  overflow: hidden;
+}
+
+a .span-mother2 {
+  position: absolute;
+}
+
+a .span-mother2 span {
+  transform: translateY(-1.2em);
+}
+
+a:hover .span-mother {
+  position: absolute;
+}
+
+a:hover .span-mother span {
+  transform: translateY(1.2em);
+}
+
+a:hover .span-mother2 span {
+  transform: translateY(0);
+}
+
+@for $i from 1 through 10 {
+  a .span-mother span:nth-child(#{$i}),
+  a .span-mother2 span:nth-child(#{$i}) {
+    transition: 0.1s + ($i * 0.1s);
+  }
+}

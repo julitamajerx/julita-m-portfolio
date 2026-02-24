@@ -1,11 +1,11 @@
 <div class="left-column">
   <div class="clickable">
-    <a routerLink="/profil" class="nav-link">
+    <a routerLink="/profil" class="nav-link" (click)="frameService.openWindow('profil')">
       <img src="profile.png" alt="Profile" />
       <span>Profil</span>
     </a>
 
-    <a routerLink="/projekty" class="nav-link">
+    <a routerLink="/projekty" class="nav-link" (click)="frameService.openWindow('projekty')">
       <img src="folder.png" alt="Projekty" />
       <span>Projekty</span>
     </a>
@@ -13,19 +13,26 @@
 </div>
 
 <div class="content">
-  <h1>PORTFOLIO</h1>
-  <p>Julita Majer</p>
-  <router-outlet></router-outlet>
+  @if (frameService.isClosed()) {
+    <div class="intro-text" [class.fading-out]="frameService.isOpening()">
+      <h1>PORTFOLIO</h1>
+      <p>Julita Majer</p>
+    </div>
+  } @else {
+    <app-frame [class.closing]="frameService.isClosing()">
+      <router-outlet></router-outlet>
+    </app-frame>
+  }
 </div>
 
 <div class="right-column">
   <div class="clickable">
-    <a routerLink="/o-mnie" class="nav-link">
+    <a routerLink="/o-mnie" class="nav-link" (click)="frameService.openWindow('o-mnie')">
       <img src="folder.png" alt="O mnie" />
       <span>O mnie</span>
     </a>
 
-    <a routerLink="/cv" class="nav-link">
+    <a routerLink="/cv" class="nav-link" (click)="frameService.openWindow('cv')">
       <img src="folder.png" alt="CV" />
       <span>CV</span>
     </a>
@@ -36,7 +43,7 @@
   <a href="https://github.com/julitamajerx" target="_blank">
     <img src="github.png" alt="Github" />
   </a>
-  <a href="mailto:julitamajer@gmail.com">
+  <a routerLink="/kontakt" (click)="frameService.openWindow('kontakt')">
     <img src="email.png" alt="Email" />
   </a>
   <a href="https://www.linkedin.com/in/julita-majer-5848a133a/" target="_blank">
