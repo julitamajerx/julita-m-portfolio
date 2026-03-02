@@ -1,0 +1,35 @@
+@use '../../variables' as *;
+
+:host {
+  display: block;
+  max-height: 650px;
+  max-width: 1300px;
+  padding: 0 $footer-padding;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: $color-secondary;
+  clear: both;
+}
+
+h3 {
+  color: $color-secondary-dark;
+}
+
+p {
+  line-height: 1.3em;
+  padding: 0;
+  text-align: justify;
+}
+
+ul {
+  li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
