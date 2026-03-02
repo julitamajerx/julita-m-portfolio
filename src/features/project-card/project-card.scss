@@ -1,0 +1,48 @@
+@use '../../variables' as *;
+
+:host {
+  display: block;
+  max-width: 420px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: $color-secondary;
+  border-radius: $frame-radius;
+
+  div {
+    @include flex-center();
+
+    .project-thumbnail {
+      width: 400px;
+      height: 400px;
+      border-radius: 15px;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+
+    td {
+      padding: 10px;
+      border: 1px solid #ffffff;
+
+      &:nth-child(n) {
+        border-top: none;
+      }
+    }
+
+    tr:first-child td {
+      border-top: none;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    td:first-child {
+      border-left: none;
+    }
+    td:last-child {
+      border-right: none;
+    }
+  }
+}
