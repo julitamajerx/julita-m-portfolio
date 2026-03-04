@@ -1,10 +1,33 @@
-<h2>NBP Currency Tracker & Calculator</h2>
-<p>
-  Głównym celem projektu było zaprezentowanie moich umiejętności pracy z biblioteką
-  <strong>Angular Material</strong>. Posiadam doświadczenie w pracy z innymi rozwiązaniami, takimi
-  jak Tailwind CSS, Bootstrap oraz Telerik UI, dlatego zdecydowałam się poszerzyć swój warsztat o
-  natywne rozwiązanie proponowane przez zespół Angulara.
-</p>
+<div class="project-columns">
+  <app-project-card
+    [imgName]="'nbp.png'"
+    [role]="'programista'"
+    [group]="'1 osoba'"
+    [time]="'1,5 tygodnia'"
+    [tech]="'Angular Material, Chart.js, NBP API'"
+  ></app-project-card>
+  <div>
+    <h2>NBP Currency Tracker & Calculator</h2>
+    <p>
+      Głównym celem projektu było zaprezentowanie moich umiejętności pracy z biblioteką
+      <strong>Angular Material</strong>. Posiadam doświadczenie w pracy z innymi rozwiązaniami,
+      takimi jak Tailwind CSS, Bootstrap oraz Telerik UI, dlatego zdecydowałam się poszerzyć swój
+      warsztat o natywne rozwiązanie proponowane przez zespół Angulara.
+    </p>
+
+     <ul>
+      <li>
+        🔗
+        <a href="https://github.com/julitamajerx/nbp-api-app" target="_blank"
+          >https://github.com/julitamajerx/nbp-api-app</a
+        >
+        - repozytorium
+      </li>
+    </ul>
+
+    <app-carousel [items]="nbpSlides"  [width]="'600px'"></app-carousel>
+  </div>
+</div>
 
 Wykorzystanie Angular Material:
 
