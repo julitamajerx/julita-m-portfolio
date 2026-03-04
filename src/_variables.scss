@@ -34,3 +34,36 @@ $bar-btn-size: 30px;
   align-items: center;
   gap: $gap;
 }
+
+@mixin typography-defaults {
+  h2 {
+    color: $color-secondary;
+    clear: both;
+  }
+
+  h3 {
+    color: $color-secondary-dark;
+    margin: 0;
+  }
+
+  p {
+    line-height: 1.3em;
+    padding: 0;
+    text-align: justify;
+  }
+
+  ul {
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@mixin iframe-style {
+  border: 10px solid $color-secondary;
+  border-radius: $frame-radius;
+}

@@ -1,9 +1,5 @@
 @use '../../variables' as *;
 
-:host {
-  max-width: 1000px;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -39,5 +35,9 @@ li {
 }
 
 .content {
-  padding: $frame-padding;
+  max-height: 750px;
+  max-width: 1300px;
+  padding: 0 $footer-padding;
+  overflow-y: auto;
+  box-sizing: border-box;
 }

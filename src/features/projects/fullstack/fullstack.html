@@ -1,13 +1,302 @@
+<div class="project-columns">
+  <app-project-card
+    [imgName]="'todo.png'"
+    [role]="'programista'"
+    [group]="'1 osoba'"
+    [time]="'1,5 miesiąca'"
+    [tech]="'Angular, Express.js, MongoDB, Node.js, GitHub Actions, Playwright'"
+  ></app-project-card>
+  <div>
+    <h2>Todo (Fullstack MEAN Stack & CI/CD)</h2>
+
+    <p>
+      Głównym celem projektu było stworzenie pełnoprawnej aplikacji typu fullstack, łączącej
+      <strong>ekosystem Angular</strong> z backendem w <strong>Express.js</strong>. Skupiłam się na
+      architekturze typu Client-Server, zapewniając pełną komunikację z bazą danych
+      <strong>MongoDB</strong> oraz wdrażając nowoczesne standardy automatyzacji procesów
+      <strong>(CI/CD)</strong> i <strong>testowania E2E</strong>.
+    </p>
+
+    <ul>
+      <li>\
+        🔗
+        <a href="https://julitamajerx.github.io/todo/#/" target="_blank"
+          >https://julitamajerx.github.io/todo/#/</a
+        >
+        - github pages
+      </li>
+      <li>
+        🔗
+        <a href="https://github.com/julitamajerx/todo" target="_blank"
+          >https://github.com/julitamajerx/todo</a
+        >
+        - repozytorium
+      </li>
+    </ul>
+
+    <iframe
+      width="560"
+      height="325"
+      src="https://www.youtube.com/embed/4cSEtQ9gDRY?si=ggNnQOHZfKR90iSd"
+      title="YouTube video player"
+      frameborder="0"
+      allow="
+        accelerometer;
+        autoplay;
+        clipboard-write;
+        encrypted-media;
+        gyroscope;
+        picture-in-picture;
+        web-share;
+      "
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<div class="docs">
+  <iframe
+    width="800"
+    height="450"
+    src="https://miro.com/app/live-embed/uXjVLKNH5MY=/?focusWidget=3458764650645505777&embedMode=view_only_without_ui&embedId=171069011205"
+    frameborder="0"
+    scrolling="no"
+    allow="fullscreen; clipboard-read; clipboard-write"
+    allowfullscreen
+  ></iframe>
+
+  <iframe
+    width="800"
+    height="450"
+    src="https://embed.figma.com/design/g8K4AIbI8iwsQr27wndWU9/Portfolio-webdevelopment-fuucdv?node-id=0-1&embed-host=share"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<h3>Kluczowe elementy projektu</h3>
+<br />
+<strong>Architektura Fullstack & Backend:</strong>
+
+<ul>
+  <li>
+    Node.js & Express: Stworzyłam <strong>REST API</strong> obsługujące pełen cykl
+    <strong>CRUD</strong>. Serwer zarządza komunikacją z bazą danych, walidacją zapytań oraz
+    przesyłaniem danych do frontendu w formacie <strong>JSON</strong>.
+  </li>
+
+  <li>
+    Baza danych MongoDB: Wykorzystałam <strong>nierelacyjną</strong> bazę danych do elastycznego
+    przechowywania zadań i powiązanych z nimi list oraz tagów.
+  </li>
+
+  <li>Automatyzacja i Jakość (CI/CD):</li>
+  <ul>
+    <li>
+      GitHub Actions: Skonfigurowałam <strong>pipeline</strong>, który przy każdym commicie
+      automatycznie dba o jakość projektu:
+    </li>
+    <li>
+      Linter & Formatter: Automatyczne uruchamianie <strong>ESLint</strong> i
+      <strong>Prettier</strong> dla zachowania czystości kodu.
+    </li>
+
+    <li>
+      Auto-deploy: Po pomyślnym przejściu testów, aplikacja jest automatycznie publikowana na
+      <strong>GitHub Pages</strong>.
+    </li>
+    <li>
+      Testy E2E (<strong>Playwright</strong>): Zaprojektowałam scenariusze testowe typu happy path,
+      symulujące pełną ścieżkę użytkownika - od dodania zadania, przez jego edycję, aż po usunięcie.
+      Gwarantuje to stabilność kluczowych funkcji przed każdym wdrożeniem.
+    </li>
+  </ul>
+</ul>
+<strong>Frontend & Angular:</strong>
+<ul>
+  <li>
+    Ścisłe typowanie: Wykorzystanie TypeScript oraz <strong>generycznych interfejsów</strong> (np.
+    ActionResponse), co zapewnia spójność danych między backendem a frontendem.
+  </li>
+
+  <li>
+    Clean Code: <strong>Centralizacja endpointów</strong> w formie stałych, co eliminuje hardcoding
+    i ułatwia skalowanie struktury URL.
+  </li>
+  <li>
+    Globalna obsługa HTTP: System <strong>interceptorów</strong> do scentralizowanej obsługi błędów
+    oraz automatycznego zarządzania loaderem.
+  </li>
+
+  <li>
+    Nowoczesna Reaktywność (Signals): Logika oparta na <strong>sygnałach</strong>, przy zachowaniu
+    <strong>RxJS</strong> do zapytań HTTP. Pozwala to na uniknięcie ręcznego zarządzania
+    subskrypcjami i zwiększenie wydajności renderowania.
+  </li>
+  <li>
+    UX & Performance: Implementacja mechanizmu timeout dla spinnera, co zapobiega efektowi "migania"
+    przy szybkich odpowiedziach z API.
+  </li>
+
+  <li>
+    Standardy Angular 21+: Wykorzystanie <strong>input()</strong> dla sprawnego przepływu danych
+    oraz <strong>effect()</strong> do automatycznej synchronizacji stanu lokalnego z globalnym
+    TaskService.
+  </li>
+  <li>
+    Adaptive Layout: Zarządzanie widokiem za pomocą <strong>CDK Layout</strong>. Aplikacja wykrywa
+    urządzenia mobilne, zmieniając układ z dwukolumnowego Gridu na tryb pełnoekranowy
+    (Mobile-first).
+  </li>
+
+  <li>
+    Bezpieczeństwo pamięci: W przypadkach użycia RxJS poza HTTP (np. obserwowanie szerokości
+    ekranu), stosuję <strong>takeUntilDestroyed()</strong>, co jest najlepszą praktyką zapobiegania
+    wyciekom pamięci.
+  </li>
+
+  <li>
+    Zaawansowany Edytor: Integracja edytora <strong>rich text (Quill)</strong> z Reactive Forms, co
+    pozwala na zaawansowane formatowanie opisów zadań.
+  </li>
+  <li>
+    Modularność (CDK Dialog): Wykorzystanie @angular/cdk/dialog do stworzenia generycznych okien
+    dialogowych zgodnie z zasadą DRY.
+  </li>
+  <li>
+    Optymalizacja widoku (Computed): Zastosowanie funkcji computed do zarządzania sidebarem.
+    Aplikacja wydajnie renderuje podgląd ostatnich elementów, zachowując przejrzystość przy dużej
+    ilości danych.
+  </li>
+  <li>
+    Filtrowanie "on the fly": Mechanizmy sortByTags i sortByList wchodzą w bezpośrednią interakcję z
+    globalnym stanem aplikacji, umożliwiając natychmiastowe filtrowanie zadań i szybki powrót do
+    widoku ogólnego (reset).
+  </li>
+  <li>
+    Integracja zewnętrznych bibliotek: Zaimplementowałam obsługę emoji za pomocą ngx-emoji-mart.
+    Stworzyłam spójny system personalizacji zadań, łącząc wybór ikon z natywnymi formularzami
+    Angulara.
+  </li>
+  <li>
+    Synchronizacja stanu (Two-way Data Binding & Signals): Wykorzystałam sygnały do natychmiastowego
+    odświeżania list wewnątrz komponentów zarządzania. Dzięki temu każda operacja utworzenia lub
+    usunięcia tagu/listy jest od razu widoczna w całym interfejsie bez potrzeby przeładowania
+    strony.
+  </li>
+
+  <li>
+    Logika selekcji wielokrotnej: W komponencie AddTags wdrożyłam mechanizm lokalnego buforowania
+    zaznaczonych elementów. Pozwala to użytkownikowi na swobodną zmianę wyboru przed finalnym
+    zatwierdzeniem zmian w serwisie (setSelectedTags), co optymalizuje proces aktualizacji danych.
+  </li>
+  <li>
+    Wdrożyłam mechanizm <strong>withCredentials</strong>: true na poziomie interceptora, co
+    umożliwia bezpieczną obsługę sesji opartą o <strong>iasteczka</strong>c (HttpOnly cookies) w
+    komunikacji z backendem Express.js.
+  </li>
+  <li>
+    Stworzyłam UserService zarządzający stanem zalogowanego użytkownika za pomocą Signals
+    (asReadonly). System wspiera automatyczną rehydratację stanu z localStorage oraz bezpieczne
+    przekierowania przy użyciu <strong>Auth Guards</strong>.
+  </li>
+
+  <li>
+    Zaimplementowałam funkcjonalność przesyłania awatarów przy rejestracji. Wykorzystałam obiekt
+    <strong>FormData</strong> do asynchronicznego przesyłania plików graficznych wraz z metadanymi
+    użytkownika do API.
+  </li>
+
+  <li>
+    Wykorzystanie <strong>ReactiveFormsModule</strong> do budowy formularzy logowania i rejestracji.
+    Zastosowałam wbudowane <strong>walidatory</strong> (m.in. Validators.email,
+    Validators.minLength) oraz mechanizm nonNullable, co zwiększa bezpieczeństwo typów wewnątrz
+    komponentów.
+  </li>
+
+  <li>
+    Integracja biblioteki <strong>toastr</strong> wewnątrz serwisu użytkownika, co zapewnia spójny
+    system powiadomień o sukcesach (np. poprawne logowanie) i błędach API w całej aplikacji.
+  </li>
+
+  <li>
+    Konfiguracja routingu z obsługą tras chronionych (canActivate) oraz mechanizmu
+    <strong>withHashLocation()</strong>, co ułatwia hosting aplikacji na platformach takich jak
+    GitHub Pages.
+  </li>
+</ul>
+<strong>Testy:</strong>
+<ul>
+  <li>
+    Testy API (Integracyjne): Weryfikacja pełnego cyklu życia danych (GET/POST) dla zadań, tagów i
+    list.
+  </li>
+  <ul>
+    <li>
+      Automatyzacja procesu autentykacji (loginApi) przy użyciu zmiennych środowiskowych, co pozwala
+      na bezpieczne testy w środowiskach CI/CD.
+    </li>
+    <li>Walidacja poprawności struktur JSON oraz kodów statusów HTTP (200 OK).</li>
+  </ul>
+  <li>Testy E2E (End-to-End):</li>
+  <ul>
+    <li>
+      Scenariusze happy path: Automatyzacja pełnej ścieżki użytkownika - od logowania, przez
+      tworzenie złożonych zadań (z wyborem daty, tagów i formatowaniem opisu), aż po mechanizmy
+      usuwania i przywracania danych z kosza.
+    </li>
+
+    <li>
+      Obsługa komponentów dynamicznych: Testy obejmują interakcje z elementami takimi jak edytor
+      Quill, modale Angular CDK oraz wybór emoji z ngx-emoji-mart.
+    </li>
+  </ul>
+</ul>
+<strong>Backend:</strong>
+<ul>
+  <li>
+    Autentykacja (<strong>JWT & Cookies</strong>): Wdrożyłam bezpieczny system logowania oparty na
+    JSON Web Tokens przesyłanych w ciasteczkach HttpOnly. Dzięki temu aplikacja jest odporna na
+    ataki XSS, a sesja użytkownika jest zarządzana po stronie serwera.
+  </li>
+
+  <li>
+    Integracja z <strong>Cloudinary</strong> & <strong>Multer</strong>: Zaimplementowałam
+    zaawansowany moduł przesyłania plików. Zdjęcia profilowe są procesowane "w locie" (kadrowanie do
+    twarzy, optymalizacja jakości) i przechowywane w chmurze Cloudinary, co odciąża serwer
+    aplikacji.
+  </li>
+
+  <li>
+    Automatyzacja zadań (<strong>Cron Jobs</strong>): Wdrożyłam system node-cron, który każdej nocy
+    automatycznie oczyszcza bazę danych z zadań starszych niż 30 dni. Pokazuje to dbałość o higienę
+    danych i wydajność bazy MongoDB.
+  </li>
+  <li>
+    Scentralizowana obsługa błędów: Stworzyłam dedykowany <strong>errorMiddleware</strong> oraz
+    klasę AppError. System rozpoznaje specyficzne błędy bazy (np. CastError czy duplikaty),
+    zwracając użytkownikowi czytelne komunikaty zamiast surowych błędów serwera.
+  </li>
+  <li>
+    Relacyjne modelowanie w MongoDB (<strong>Mongoose</strong>): Wykorzystałam mechanizm populate do
+    łączenia zadań z listami i tagami. Architektura bazy uwzględnia pełną izolację danych - każdy
+    użytkownik ma dostęp wyłącznie do swoich zasobów dzięki rygorystycznemu sprawdzaniu userId na
+    poziomie kontrolerów.
+  </li>
+
+  <li>
+    Clean Code & Middleware: Wykorzystanie <strong>express-async-handler</strong> do czystej obsługi
+    asynchroniczności oraz middlewareów (np. authHandler) do ochrony tras przed nieautoryzowanym
+    dostępem.
+  </li>
+
+  <li>Depoly backendu na <strong>Renderer</strong>.</li>
+</ul>
+<h3>Co wyniosłam z projektu?</h3>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque tempus elit, varius
-  pretium justo sagittis ut. Vivamus elit purus, pulvinar quis urna at, pharetra accumsan velit. In
-  scelerisque, turpis vel sodales interdum, est metus tristique leo, eget molestie purus arcu sed
-  lacus. Suspendisse mollis velit nec augue pharetra, vel tempor massa tincidunt. Maecenas faucibus
-  urna elit, ut placerat purus placerat eget. Suspendisse a sem et nulla tristique condimentum.
-  Praesent eget lorem eget tellus dignissim rhoncus vel tempor dolor. Donec rhoncus sodales arcu non
-  mattis. Sed pulvinar sit amet massa auctor hendrerit. Nullam nec aliquet diam. Cras vestibulum
-  tortor ut ipsum feugiat, sit amet dignissim elit tempor. Interdum et malesuada fames ac ante ipsum
-  primis in faucibus. Fusce nec vestibulum nisl, id dapibus justo. Suspendisse et mi id eros semper
-  dictum sed vel odio. Pellentesque vitae turpis ante. Vivamus nibh lacus, cursus sed varius vitae,
-  dapibus in lorem.
+  Projekt Todo Fullstack stanowi zwieńczenie mojego stażu i jest praktycznym sprawdzianem zdobytej
+  wiedzy. Praca nad nim pozwoliła mi wyjść poza ramy samego kodowania komponentów i spojrzeć na
+  aplikację jako na kompletny, bezpieczny produkt gotowy do wdrożenia. Projekt ten udowodnił mi, że
+  najbardziej satysfakcjonuje mnie budowanie rozwiązań, które są nie tylko funkcjonalne, ale przede
+  wszystkim stabilne, bezpieczne i napisane zgodnie z najlepszymi praktykami rynkowymi :)
 </p>

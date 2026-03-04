@@ -1,0 +1,35 @@
+@use '../../../variables' as *;
+
+@include typography-defaults;
+
+.project-columns {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    iframe {
+      align-self: center;
+      margin-top: 20px;
+      @include iframe-style();
+    }
+  }
+}
+
+a:hover {
+  text-decoration: underline;
+  color: $color-secondary-dark;
+}
+
+.docs {
+  @include flex-center(column, 20px);
+  margin: 20px 0;
+
+  iframe {
+    @include iframe-style();
+  }
+}

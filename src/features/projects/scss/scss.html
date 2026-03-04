@@ -1,13 +1,74 @@
+<h2>Frutiger Aero UI</h2>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque tempus elit, varius
-  pretium justo sagittis ut. Vivamus elit purus, pulvinar quis urna at, pharetra accumsan velit. In
-  scelerisque, turpis vel sodales interdum, est metus tristique leo, eget molestie purus arcu sed
-  lacus. Suspendisse mollis velit nec augue pharetra, vel tempor massa tincidunt. Maecenas faucibus
-  urna elit, ut placerat purus placerat eget. Suspendisse a sem et nulla tristique condimentum.
-  Praesent eget lorem eget tellus dignissim rhoncus vel tempor dolor. Donec rhoncus sodales arcu non
-  mattis. Sed pulvinar sit amet massa auctor hendrerit. Nullam nec aliquet diam. Cras vestibulum
-  tortor ut ipsum feugiat, sit amet dignissim elit tempor. Interdum et malesuada fames ac ante ipsum
-  primis in faucibus. Fusce nec vestibulum nisl, id dapibus justo. Suspendisse et mi id eros semper
-  dictum sed vel odio. Pellentesque vitae turpis ante. Vivamus nibh lacus, cursus sed varius vitae,
-  dapibus in lorem.
+  Głównym celem było odwzorowanie złożonych efektów wizualnych z lat 2000. (takich jak szkło, metal,
+  połysk czy tekstury węglowe) przy użyciu wyłącznie czystego kodu <strong>CSS/SCSS</strong>, bez
+  nadużywania plików graficznych. Wybrana estetyka służyła zmierzeniu się z odtworzeniem
+  skomplikowanych tekstur i kształtów, wykraczających poza wszechobecny dzisiaj flat design.
+</p>
+
+Kluczowe elementy projektu:
+
+<ul>
+  <li>
+    <strong>Organizacja stylów w SCSS:</strong>
+    <p>
+      Projekt został podzielony na <strong>moduły</strong>, co ułatwia zarządzanie kodem. Do
+      automatyzacji pracy wykorzystałam <strong>Watch SCSS</strong> oraz
+      <strong>Live Server</strong>, co pozwalało na bieżący podgląd zmian.
+    </p>
+  </li>
+  <li>
+    <strong>Wykorzystanie SCSS:</strong>
+    <ul>
+      <li>
+        <strong>Zmienne ($variables):</strong> Wszystkie kluczowe wartości (kolory, cienie, border
+        radius) posiadają swoje zmienne, co pozwala na błyskawiczną podmianę motywu w całym
+        projekcie.
+      </li>
+      <li>
+        <strong>@mixin:</strong> Logikę dla stanów hover i active przeniosłam do @mixin, aby uniknąć
+        powtarzania kodu i zachować spójność interakcji.
+      </li>
+      <li>
+        <strong>Dziedziczenie (@extend):</strong> Każdy rodzaj przycisku posiada swój styl bazowy
+        (core) oraz trzy rozmiary, które są rozszerzeniem wyglądu podstawowego.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Custom Scrollbar:</strong>
+    <p>
+      Stworzyłam niestandardowy wygląd paska przewijania (scrollbar thumb) za pomocą właściwości
+      <strong>webkit</strong>, aby dopasować go do klimatu całego interfejsu.
+    </p>
+  </li>
+  <li>
+    <strong>Responsywność (RWD):</strong>
+    <p>
+      Zastosowałam układ <strong>CSS Grid</strong>, który automatycznie zwija się do jednej kolumny
+      na urządzeniach mobilnych, dbając o czytelność komponentów.
+    </p>
+  </li>
+</ul>
+
+<h3>Co wyniosłam z projektu?</h3>
+<p>
+  Dzięki wybranemu stylowi mogłam znacząco pogłębić wiedzę z zakresu SCSS oraz zaawansowanego
+  stylowania w CSS. Projekt pozwolił mi w praktyce przetestować:
+</p>
+<ul>
+  <li>
+    <strong>Wielowarstwowe cienie:</strong> Łączenie box-shadow (zarówno wewnętrznych inset, jak i
+    zewnętrznych), aby uzyskać efekt głębi i trójwymiarowości.
+  </li>
+  <li>
+    <strong>Złożone gradienty:</strong> Praca z linear-gradient oraz kolorami rgba, co było kluczowe
+    do oddania efektu połysku i przezroczystości.
+  </li>
+</ul>
+<p>
+  Uważam tę wiedzę za szczególnie cenną w kontekście powracającej mody na estetykę Y2K oraz Frutiger
+  Aero. Obserwowany obecnie wzrost popularności m.in. <strong>glassmorphismu</strong> pokazuje, że
+  umiejętność tworzenia takich detali wizualnych jest coraz bardziej poszukiwana i pozwala tworzyć
+  nowoczesne, wyróżniające się interfejsy.
 </p>

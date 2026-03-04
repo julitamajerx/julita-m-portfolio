@@ -9,31 +9,7 @@
   box-sizing: border-box;
 }
 
-h2 {
-  color: $color-secondary;
-  clear: both;
-}
-
-h3 {
-  color: $color-secondary-dark;
-  margin: 0;
-}
-
-p {
-  line-height: 1.3em;
-  padding: 0;
-  text-align: justify;
-}
-
-ul {
-  li {
-    margin-bottom: 10px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
+@include typography-defaults;
 
 .project-columns {
   display: flex;

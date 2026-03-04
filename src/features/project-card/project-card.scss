@@ -1,7 +1,7 @@
 @use '../../variables' as *;
 
 :host {
-  max-width: 420px;
+  max-width: 520px;
   height: fit-content;
   padding: 10px;
   box-sizing: border-box;
@@ -12,8 +12,7 @@
     @include flex-center();
 
     .project-thumbnail {
-      width: 400px;
-      height: 400px;
+      width: 500px;
       border-radius: 15px;
     }
   }

@@ -1,13 +1,89 @@
+<h2>NBP Currency Tracker & Calculator</h2>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque tempus elit, varius
-  pretium justo sagittis ut. Vivamus elit purus, pulvinar quis urna at, pharetra accumsan velit. In
-  scelerisque, turpis vel sodales interdum, est metus tristique leo, eget molestie purus arcu sed
-  lacus. Suspendisse mollis velit nec augue pharetra, vel tempor massa tincidunt. Maecenas faucibus
-  urna elit, ut placerat purus placerat eget. Suspendisse a sem et nulla tristique condimentum.
-  Praesent eget lorem eget tellus dignissim rhoncus vel tempor dolor. Donec rhoncus sodales arcu non
-  mattis. Sed pulvinar sit amet massa auctor hendrerit. Nullam nec aliquet diam. Cras vestibulum
-  tortor ut ipsum feugiat, sit amet dignissim elit tempor. Interdum et malesuada fames ac ante ipsum
-  primis in faucibus. Fusce nec vestibulum nisl, id dapibus justo. Suspendisse et mi id eros semper
-  dictum sed vel odio. Pellentesque vitae turpis ante. Vivamus nibh lacus, cursus sed varius vitae,
-  dapibus in lorem.
+  Głównym celem projektu było zaprezentowanie moich umiejętności pracy z biblioteką
+  <strong>Angular Material</strong>. Posiadam doświadczenie w pracy z innymi rozwiązaniami, takimi
+  jak Tailwind CSS, Bootstrap oraz Telerik UI, dlatego zdecydowałam się poszerzyć swój warsztat o
+  natywne rozwiązanie proponowane przez zespół Angulara.
+</p>
+
+Wykorzystanie Angular Material:
+
+<ul>
+  <li>
+    <strong>MatTable &amp; MatPaginator:</strong>
+    <ul>
+      <li>Obsługa dynamicznych tabel z funkcjami filtrowania, sortowania oraz paginacji danych.</li>
+      <li>Implementacja search baru, który umożliwia filtrowanie walut po nazwie lub kodzie.</li>
+      <li>
+        Wbudowany mechanizm empty search - w przypadku braku wyników, użytkownik otrzymuje czytelny
+        komunikat z możliwością szybkiego wyczyszczenia wyszukiwania.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>MatSideNav i MatTree:</strong>
+    <ul>
+      <li>
+        Dynamiczne menu boczne, służące do wygodnej nawigacji między różnymi typami tabel NBP (A, B,
+        C) i kalkulatorem.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>MatDialog &amp; Chart.js:</strong>
+    <ul>
+      <li>Wykorzystanie dialogów do prezentowania szczegółowej historii kursów wybranej waluty.</li>
+      <li>
+        Wizualizacja danych historycznych za pomocą interaktywnego wykresu liniowego stworzonego w
+        bibliotece Chart.js.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>MatFormField &amp; Reactive Forms:</strong>
+    <ul>
+      <li>Obsługa kalkulatora walut z pełną walidacją formularzy.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>MatSpinner &amp; Interceptor:</strong>
+    <ul>
+      <li>Globalny loader informujący o pobieraniu danych.</li>
+      <li>
+        Zastosowanie Interceptora z logiką opóźnienia, co pozwala uniknąć efektu migania spinnera
+        przy bardzo szybkich odpowiedziach z API.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>MatSnackBar:</strong>
+    <ul>
+      <li>
+        Obsługa komunikatów o błędach (np. problemów z połączeniem z API) wyświetlanych w formie
+        estetycznych powiadomień w prawym dolnym rogu ekranu.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Responsywność (RWD):</strong>
+    <ul>
+      <li>
+        Aplikacja została dostosowana do urządzeń mobilnych. Zastosowano elastyczne layouty, a
+        boczna nawigacja (MatDrawer) na mniejszych ekranach zmienia tryb działania. Zamiast pojawiać
+        się po lewej stronie, drawer po rozwinięciu zajmuje 100% szerokości ekranu, co znacznie
+        poprawia wygodę korzystania z menu na małych wyświetlaczach.
+      </li>
+    </ul>
+  </li>
+</ul>
+<p>
+  Dodatkowo w celu zachowania dobrych praktyk TS i estetycznego wyglądu kodu, dodałam
+  <strong>Prettier</strong> i <strong>ESLint</strong>.
+</p>
+
+<h3>Co wyniosłam z projektu?</h3>
+<p>
+  Przy tworzeniu kalkulatora stanęłam przed problemem połączenia danych z dwóch osobnych endpointów.
+  Rozwiązałam to za pomocą operatora <strong>forkJoin</strong>, co pozwoliło na sprawne zasilenie
+  listy walut z różnych tabel NBP jednocześnie.
 </p>
