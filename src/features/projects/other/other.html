@@ -1,13 +1,148 @@
+<div class="project-columns">
+  <app-project-card
+    [imgName]="'evalio.png'"
+    [role]="'stażystka'"
+    [group]="'zespół 4 osób'"
+    [time]="'3 miesiące'"
+    [tech]="'Angular, ASP.NET Web API, MS Entra ID, Kendo UI, Azure DevOps'"
+  ></app-project-card>
+  <div>
+    <h2>Staż | Evalio</h2>
+    <p>
+      Projekt korporacyjny służący do okresowej ewaluacji pracowników, zbudowany w oparciu o
+      architekturę <strong>Clean Architecture</strong> (Ardalis) przy użyciu
+      <strong>Angular 20+</strong> oraz <strong>ASP.NET Web API</strong>. Mój zakres prac:
+    </p>
+    <ul>
+      <li>
+        Zastosowanie warstwowej architektury Clean Architecture, zapewniającej wysoką testowalność i
+        łatwość utrzymania kodu.
+      </li>
+      <li>
+        Bezpieczna autentykacja użytkowników z wykorzystaniem <strong>MS Entra ID</strong> oraz
+        biblioteki <strong>MSAL</strong>
+        (silent sign-in).
+      </li>
+      <li>
+        Integracja z ekosystemem Microsoft: automatyczne <strong>powiadomienia e-mail</strong> oraz
+        planowanie wydarzeń w <strong>kalendarzu Teams</strong> za pomocą procesów w tle (<strong
+          >Background Jobs</strong
+        >).
+      </li>
+      <li>
+        Wykorzystanie komponentów <strong>Kendo UI + Tailwind CSS</strong>, biblioteki
+        <strong>AutoMapper</strong> oraz <strong>Entity Framework</strong> do zarządzania przepływem
+        danych.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="project-columns">
+  <app-carousel [items]="seoSlides" [width]="'500px'"></app-carousel>
+  <div>
+    <h2>Inne</h2>
+    <p>
+      Miałam okazję uczestniczyć w wspólnym przebudowaniu strony opartej o Angular. Moim zadaniem
+      było zadbanie o <strong>SEO strony</strong>:
+    </p>
+
+    <ul>
+      <li>Optymalizacja metadanych i treści pod kątem wyszukiwarek.</li>
+      <li>Dostosowanie formatu i wielkości zdjęć.</li>
+      <li>Zmiana na SSR.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Legacy</h2>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque tempus elit, varius
-  pretium justo sagittis ut. Vivamus elit purus, pulvinar quis urna at, pharetra accumsan velit. In
-  scelerisque, turpis vel sodales interdum, est metus tristique leo, eget molestie purus arcu sed
-  lacus. Suspendisse mollis velit nec augue pharetra, vel tempor massa tincidunt. Maecenas faucibus
-  urna elit, ut placerat purus placerat eget. Suspendisse a sem et nulla tristique condimentum.
-  Praesent eget lorem eget tellus dignissim rhoncus vel tempor dolor. Donec rhoncus sodales arcu non
-  mattis. Sed pulvinar sit amet massa auctor hendrerit. Nullam nec aliquet diam. Cras vestibulum
-  tortor ut ipsum feugiat, sit amet dignissim elit tempor. Interdum et malesuada fames ac ante ipsum
-  primis in faucibus. Fusce nec vestibulum nisl, id dapibus justo. Suspendisse et mi id eros semper
-  dictum sed vel odio. Pellentesque vitae turpis ante. Vivamus nibh lacus, cursus sed varius vitae,
-  dapibus in lorem.
+  Posidam parę starszych projektów, które pomogły mi zdobyć doświadczenie w różnych technologiach i
+  architekturach. Nie są one idealne, ale pokazują jaką drogę przebyłam w swojej naucę i pozwoliły
+  mi zebrać cenne doświadczenie :)
 </p>
+<div class="project-columns">
+  <app-carousel [items]="invoiceSlides" [width]="'500px'"></app-carousel>
+  <div>
+    <h3>InvoiceMaker (ASP.NET MVC)</h3>
+    <p>
+      Aplikacja webowa stworzona w technologii <strong>ASP.NET MVC</strong> (.NET 9) do
+      kompleksowego zarządzania procesem fakturowania.
+    </p>
+    <ul>
+      <li>
+        Implementacja wzorców <strong>CQRS</strong> oraz <strong>MediatR</strong> w celu separacji
+        logiki odczytu i zapisu danych.
+      </li>
+      <li>
+        Automatyczne pobieranie danych kontrahentów z
+        <strong>API Ministerstwa Finansów (MRiF)</strong> na podstawie numeru NIP.
+      </li>
+      <li>Generowanie dokumentów PDF z wykorzystaniem biblioteki <strong>PDFsharp</strong>.</li>
+      <li>
+        System autoryzacji i rejestracji oparty na <strong>ASP.NET Identity</strong> oraz
+        asynchroniczne zarządzanie kontrahentami bez przeładowywania strony.
+      </li>
+      <li>Komponenty <strong>Bootstrap 5</strong>.</li>
+      <li>
+        🔗
+        <a href="https://github.com/julitamajerx/InvioceMakerWeb" target="_blank"
+          >https://github.com/julitamajerx/InvioceMakerWeb</a
+        >
+        - repozytorium
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="project-columns">
+  <app-carousel [items]="bloggerSlides" [width]="'500px'"></app-carousel>
+  <div>
+    <h3>Blogger</h3>
+    <p>
+      Platforma blogowa oparta na <strong>ASP.NET 8 Razor Pages</strong>, oferująca pełen system
+      zarządzania treścią.
+    </p>
+    <ul>
+      <li>Zarządzanie rolami i użytkownikami przy użyciu <strong>ASP.NET Identity</strong>.</li>
+      <li>
+        Integracja z <strong>Cloudinary</strong> do przechowywania obrazów oraz edytorem
+        <strong>Froala WYSIWYG</strong> do tworzenia treści postów.
+      </li>
+      <li>System tagowania, komentowania i lajkowania treści przez zalogowanych użytkowników.</li>
+      <li>Komponenty <strong>Bootstrap 5</strong>.</li>
+      <li>
+        🔗<a href="https://github.com/julitamajerx/Blogger" target="_blank"
+          >https://github.com/julitamajerx/Blogger</a
+        >
+        - repozytorium
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="project-columns">
+  <app-carousel [items]="winFromSlides" [width]="'500px'"></app-carousel>
+  <div>
+    <h3>InvoiceMaker Desktop</h3>
+    <p>
+      Aplikacja okienkowa <strong>Windows Forms (C#)</strong> stanowiąca fundament rozwoju systemów
+      do fakturowania w moim portfolio.
+    </p>
+    <ul>
+      <li>Komunikacja z lokalną bazą danych przy użyciu <strong>LINQ to SQL</strong>.</li>
+      <li>
+        Pobieranie danych z <strong>API MRiF</strong> oraz automatyczna numeracja faktur i
+        przeliczanie kwot netto/brutto.
+      </li>
+      <li>Generowanie i automatyczny zapis plików PDF do folderu Dokumenty użytkownika.</li>
+      <li>
+        🔗
+        <a href="https://github.com/julitamajerx/InvoiceMaker-WinForms" target="_blank"
+          >https://github.com/julitamajerx/InvoiceMaker-WinForms</a
+        >
+        - repozytorium
+      </li>
+    </ul>
+  </div>
+</div>

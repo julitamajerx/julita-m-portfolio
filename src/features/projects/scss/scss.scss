@@ -1,3 +1,14 @@
 @use '../../../variables' as *;
 
 @include typography-defaults;
+
+.project-columns {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: $color-secondary-dark;
+}

@@ -12,12 +12,6 @@
     flex-direction: column;
     flex: 1;
 
-    iframe {
-      align-self: center;
-      margin-top: 20px;
-      @include iframe-style();
-    }
-
     app-carousel {
       align-self: center;
       margin-top: 20px;
@@ -28,13 +22,4 @@
 a:hover {
   text-decoration: underline;
   color: $color-secondary-dark;
-}
-
-.docs {
-  @include flex-center(column, 20px);
-  margin: 20px 0;
-
-  iframe {
-    @include iframe-style();
-  }
 }
