@@ -3,9 +3,7 @@
 @include typography-defaults;
 
 .project-columns {
-  display: flex;
-  gap: 20px;
-  margin: 20px 0;
+  @include project-column();
 
   div {
     display: flex;
@@ -17,9 +15,4 @@
       margin-top: 20px;
     }
   }
-}
-
-a:hover {
-  text-decoration: underline;
-  color: $color-secondary-dark;
 }

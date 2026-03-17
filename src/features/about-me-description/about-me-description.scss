@@ -3,7 +3,7 @@
 :host {
   display: block;
   max-height: 750px;
-  max-width: 1300px;
+  max-width: 1200px;
   padding: 0 $footer-padding;
   overflow-y: auto;
   box-sizing: border-box;
@@ -12,9 +12,7 @@
 @include typography-defaults;
 
 .project-columns {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
+  @include project-column();
 
   div {
     display: flex;

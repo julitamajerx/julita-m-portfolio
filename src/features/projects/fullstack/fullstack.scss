@@ -3,9 +3,7 @@
 @include typography-defaults;
 
 .project-columns {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
+  @include project-column();
 
   div {
     display: flex;
@@ -18,11 +16,6 @@
       @include iframe-style();
     }
   }
-}
-
-a:hover {
-  text-decoration: underline;
-  color: $color-secondary-dark;
 }
 
 .docs {
